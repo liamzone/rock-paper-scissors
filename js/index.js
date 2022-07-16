@@ -42,6 +42,7 @@ function playRound(playerSelection, computerSelection) {
       break;
 
     default:
+      console.log("Critical Error;");
       break;
   }
 
