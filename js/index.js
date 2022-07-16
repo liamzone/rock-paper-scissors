@@ -68,9 +68,24 @@ function game() {
 
   for (let i = 0; i < 5; i++) {
     //  Inputs
-    playerSelection = parseInt(
-      prompt("Select Rock [0], Paper [1] or Scissors [2]", "0")
-    );
+    let accepted = false;
+
+    while (!accepted) {
+      playerSelection = parseInt(
+        prompt("Select Rock [0], Paper [1] or Scissors [2]", "0")
+      );
+
+      if (
+        playerSelection === 0 ||
+        playerSelection === 1 ||
+        playerSelection === 2
+      ) {
+        accepted = true;
+      } else {
+        console.log("Invalid Input");
+      }
+    }
+
     computerSelection = computerPlay();
 
     //  Play Round
